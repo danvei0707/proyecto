@@ -1,10 +1,10 @@
 # Proyecto Web - HACKABOSS Enero
 
 *Desarrollado por:*  
-*Alicia Lavandeira*
-*Andrea Morais*
-*Daniel Eireos*
-*Daniel Veiga*
+*Alicia Lavandeira*  
+*Andrea Morais*  
+*Daniel Eireos*  
+*Daniel Veiga*  
 
 
 ## Desarrollo de una página web  
