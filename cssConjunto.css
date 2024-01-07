@@ -1,0 +1,49 @@
+/* pruebas */
+
+* {
+    border: solid black;
+    margin: 0px;
+}
+
+script {
+    display: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    height: 100%;
+
+}
+
+
+/*? ¿Utilizar el display grid para variar la vista según sea móvil u ordenador? */
+
+/** Colocar los elementos (¿display grid?) */
+
+header {
+    grid-area: encabezado;
+}
+
+section {
+    grid-area: seccion;
+}
+
+aside {
+    grid-area: lateral;
+}
+
+/*?  ¿Guardar en el body directamente o en una segunda caja (main)?  */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4rem 1fr 1fr;
+    grid-template-areas: 
+                        'encabezado encabezado'
+                        'seccion lateral'
+                        'seccion lateral';
+}
+
