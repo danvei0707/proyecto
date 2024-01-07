@@ -6,50 +6,58 @@
   font-family: Arial;
 }
 
-body, html {
-  height: 100%;
-  margin: 0;
+body{
+  height: 100vh;
 }
 
-.contenedor {
-  width: 50%;
+/* Se podía quitar y queda igual */
+/* .contenedor {
   height: 100%;
+} */
+
+.principalIzq {
+  box-sizing: border-box;
   float: left;
-}
 
-.caja {
-  height: 100%;
-  border: 1px solid black;
-  box-sizing: border-box;
+  width: 50%;
+  height: 100vh;
+
   padding: 10px;
+  border: 1px solid black;
 }
 
-.subcaja {
-  display: flex;
-  height: calc(45% - 10px);
-  margin-bottom: 10px;
-  border: 1px solid black;
+.seccionIzq {
   box-sizing: border-box;
-  align-items: center;
+  margin-bottom: 10px;
+
+  height: calc(45% - 10px);
+
+  display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+
+  border: 1px solid black;
 }
 
-.subcaja.subcaja1 {
+.seccionIzq.encabezado {
   display: flex;
-  height: 10%;
   justify-content: center;
   align-items:end;
+
+  height: 10%;
   border: 0px;
 }
 
-.subcaja-interna {
+.contAciertos {
   display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 40%;
   height: 100%;
   margin: 0 0px;
+
   border: 1px solid black;
-  justify-content: center;
-  align-items: center;
 
 }
