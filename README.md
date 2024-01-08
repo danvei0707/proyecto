@@ -5,7 +5,7 @@
 *Alicia Lavandeira,* 
 *Adrián López,*
 *Andrea Morais,*   
-*Daniel Veiga*  
+*Daniel Veiga.*  
 
 
 ## Desarrollo de una página web  
