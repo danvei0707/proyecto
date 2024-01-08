@@ -4,7 +4,8 @@
 *Daniel Eireos,*
 *Alicia Lavandeira,* 
 *Adrián López,*
-*Andrea Morais,*   
+*Andrea Morais* 
+*y*
 *Daniel Veiga.*  
 
 
