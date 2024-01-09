@@ -132,7 +132,12 @@
         border: 1px solid black;
         padding: 8px;  
     }
-    
+    .puntaje { height: 100px; width: 300px; background-color: blanchedalmond;
+     text-align: center; display: flex; justify-content: center; align-items:center ; position:absolute;
+     left:50%;top:50%; translate: -50% -50%; w
+    }
+
+
 /*? ========================================================================= */
 /*? ========================================================================= */
     
