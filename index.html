@@ -50,17 +50,49 @@
     </main>
 
     <aside class="gridPadre">
-        <div class="colorElegible centrado">Color 1</div>
-        <div class="colorElegible centrado">Color 2</div>
-        <div class="colorElegible centrado">Color 3</div>
-        <div class="colorElegible centrado">Color 4</div>
-        <div class="colorElegible centrado">Color 5</div>
-        <div class="colorElegible centrado">Color 6</div>
-        <div class="colorElegible centrado">Color 7</div>
-        <div class="colorElegible centrado">Color 8</div>
+        <button class="colorElegible centrado">Color 1</button>
+        <button class="colorElegible centrado">Color 2</button>
+        <button class="colorElegible centrado">Color 3</button>
+        <button class="colorElegible centrado">Color 4</button>
+        <button class="colorElegible centrado">Color 5</button>
+        <button class="colorElegible centrado">Color 6</button>
+        <button class="colorElegible centrado">Color 7</button>
+        <button class="colorElegible centrado">Color 8</button>
     </aside>
     
     <!-- añadi el script -->
     <script src="./index.js"></script>
+
+<!--? ========================================================================================================================== -->
+
+            <!--* VICTORIA -->
+    <div id="finGanar" class="fin oculto"> 
+    <div class="mensajeFin">
+        <h2>Fin del Juego</h2>
+        <h1 id="victoriaTxt" class="victoria">HAS GANADO</h1>
+        <span class="victoria">¡Has acertado correctamente 3 colores!</span>
+
+        <button id="reset">Volver a jugar</button>
+    </div>   
+    </div>
+
+            <!--! DERROTA  -->
+    <div id="finPerder" class="fin oculto"> 
+        <div class="mensajeFin">
+            <h2>Fin del Juego</h2>
+            <h1 id="derrotaTxt">PRUEBA DE NUEVO</h1>
+            <span>Has fallado 3 colores</span>
+
+            
+            <button id="reset">Volver a jugar</button>
+        </div>   
+    </div>
+
+    <script type="module" src="./endgame.js"></script>
+        
+ <!--? ========================================================================================================================== -->
+        
+
+
 </body>
 </html>
