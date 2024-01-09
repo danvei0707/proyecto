@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-console.log('sajkdhalfjkh')
-=======
 const colores = [
   "rgb(255, 89, 94)",
   "rgb(255, 202, 58)",
@@ -66,4 +63,3 @@ function CorrectRandomColorOnScreen(random_color) {
 }
 
 CorrectRandomColorOnScreen(RandomColor());
->>>>>>> a482845a9366ab5391eb527f7f4de8838d1e34b0
