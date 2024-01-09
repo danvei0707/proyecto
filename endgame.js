@@ -16,7 +16,7 @@
 //     pantallaDerrota();
 // }
 
-const resetVictoria = document.getElementById('resetVictoria')
+
 
 
 
@@ -27,14 +27,14 @@ export const pantallaVictoria = () => {
 
     //? En pruebas
     let msgFinGanar = document.getElementById("finGanar");
-    msgFinGanar.classList.remove("oculto");
-
+    msgFinGanar.classList.remove ("oculto");
+    let resetVictoria = document.getElementById("resetVictoria")
     console.log(document.getElementById('resetVictoria'))
 
-    resetVictoria.addEventListener('click', function() {
+    resetVictoria.addEventListener('click', () => {
         // Se limpia la pantalla de victoria
         document.getElementById("finGanar").classList.add("oculto")
-        reiniciarPagina()
+        
       });
 
 }
@@ -45,6 +45,16 @@ export const pantallaDerrota = () => {
     //? En pruebas
     let msgFinPerder = document.getElementById("finPerder");
     msgFinPerder.classList.remove("oculto");
+    
+    let resetDerrota = document.getElementById("resetDerrota")
+console.log(document.getElementById("resetDerrota"));
+
+resetDerrota.addEventListener('click', () => {
+    // Se limpia la pantalla de derrota
+
+    //Revisar ID's en tu html
+    document.getElementById("finPerder").classList.add("oculto")
+  });
 
 }
 
@@ -55,4 +65,17 @@ const reset = () => {}
 //? ============= Pruebas =========================================================
 
 // compruebaPuntos();
+
+//Revisar ID's en tu html
+
+//Revisar ID's en tu html
+let resetVictoria = document.getElementById("resetVictoria")
+console.log(document.getElementById("resetVictoria"));
+
+resetVictoria.addEventListener('click', () => {
+    // Se limpia la pantalla de derrota
+
+    //Revisar ID's en tu html
+    document.getElementById("finGanar").classList.add("oculto")
+  });
 

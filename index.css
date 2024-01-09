@@ -183,7 +183,7 @@ div.fin {
     margin-top: 1rem;
 }
 
-#reset {
+.mensajeFin > button {
     margin-top: 1.5rem;
     border: none;
     padding: 0.75rem;
