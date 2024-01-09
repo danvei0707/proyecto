@@ -34,6 +34,7 @@ const pantallaDerrota = () => {
     let msgFinPerder = document.getElementById("finPerder");
     msgFinPerder.classList.remove("oculto");
 
+    
 }
 
 // Botón de reset: volver a pantalla original (esconder esta, puntos a 0, nuevos colores)
@@ -44,3 +45,24 @@ const reset = () => {}
 
 compruebaPuntos();
 
+//Revisar ID's en tu html
+let resetDerrota = document.getElementById("resetDerrota")
+console.log(document.getElementById("resetDerrota"));
+
+resetDerrota.addEventListener('click', () => {
+    // Se limpia la pantalla de derrota
+    
+    //Revisar ID's en tu html
+    document.getElementById("finPerder").classList.add("oculto")
+  }); 
+
+//Revisar ID's en tu html
+let resetVictoria = document.getElementById("resetDerrota")
+console.log(document.getElementById("resetDerrota"));
+
+resetVictoria.addEventListener('click', () => {
+    // Se limpia la pantalla de derrota
+    
+    //Revisar ID's en tu html
+    document.getElementById("finPerder").classList.add("oculto")
+  }); 

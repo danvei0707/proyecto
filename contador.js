@@ -1,3 +1,5 @@
+// import { pantallaDerrota , pantallaVictoria , compruebaPuntos} from "./endgame"
+
 // Obtener los elementos necesarios del DOM
 const contAciertos = document.querySelector('.contAciertos p:last-child');
 const contFallos = document.querySelector('.contFallos p:last-child');
@@ -18,7 +20,7 @@ function reiniciarPagina() {
   fallos = 0;
   actualizarContadores();
   // Aquí iría la lógica adicional para reiniciar otros elementos de la página si es necesario
-  location.reload(); // Esta línea recarga la página
+  // location.reload(); // Esta línea recarga la página
 }
 
 // Event listener para cada color elegible
@@ -28,15 +30,15 @@ coloresElegibles.forEach((color, index) => {
     if (index === 0) {
       aciertos++;
       actualizarContadores();
+      compruebaPuntos();
     } else {
       fallos++;
       actualizarContadores();
+      compruebaPuntos();
     }
 
     // Verificar si se ha alcanzado el límite de aciertos o fallos
-    if (aciertos === 3 || fallos === 3) {
-      // Aquí iría la lógica para reiniciar la página cuando se alcance el límite
-      reiniciarPagina();
-    }
+   
+
   });
 });
