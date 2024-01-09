@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adivina el color</title>
-    <link rel="stylesheet" href="./cssConjunto.css">
-    <!-- <script src="./endgame.js"></script> -->
+    <link rel="stylesheet" href="./index.css">
 
 </head>
 <body>
@@ -31,17 +30,20 @@
            
             
             <div class="actual">
-                <h2><strong class="rgb1">255</strong>,<strong class="rgb2">0</strong>,<rgb3>0</rgb3></h2>
+                <h2 class="rgb"> 
+                    <!-- cambie el nombre y el contedio xq se agrega desde el js -->
+                    <!-- <strong class="rgb1">255</strong>,<strong class="rgb2">0</strong>,<rgb3>0</rgb3> -->
+                </h2>
                 <div class="sample"></div>
             </div>
 
             <section class="contadores">
                 <div class="contAciertos">
-                <p>Aciertos:</p><p id="aciertos">0</p>
+                <p>Aciertos:</p><p>0</p>
                 </div>
                 
                 <div class="contFallos">
-                <p>Fallos:</p><p id="fallos">0</p>
+                <p>Fallos:</p><p>0</p>
                 </div>
             </section>
 
@@ -58,21 +60,22 @@
         <button class="colorElegible centrado">Color 8</button>
     </aside>
     
+    <!-- añadi el script -->
+    <script src="./index.js"></script>
 
-    <!--? AÑADIDO NUEVO - PARA FUNCIONALIDAD JAVASCRIPT -->
-    <!--? ========================================================================================================================== -->
+<!--? ========================================================================================================================== -->
 
-             <!--* VICTORIA -->
+            <!--* VICTORIA -->
     <div id="finGanar" class="fin oculto"> 
-        <div class="mensajeFin">
-            <h2>Fin del Juego</h2>
-            <h1 id="victoriaTxt" class="victoria">HAS GANADO</h1>
-            <span class="victoria">¡Has acertado correctamente 3 colores!</span>
+    <div class="mensajeFin">
+        <h2>Fin del Juego</h2>
+        <h1 id="victoriaTxt" class="victoria">HAS GANADO</h1>
+        <span class="victoria">¡Has acertado correctamente 3 colores!</span>
 
-            <button id="reset">Volver a jugar</button>
-        </div>   
+        <button id="reset">Volver a jugar</button>
+    </div>   
     </div>
-    
+
             <!--! DERROTA  -->
     <div id="finPerder" class="fin oculto"> 
         <div class="mensajeFin">
@@ -86,8 +89,10 @@
     </div>
 
     <script type="module" src="./endgame.js"></script>
+        
+ <!--? ========================================================================================================================== -->
+        
 
-    <!--? ========================================================================================================================== -->
 
 </body>
 </html>
