@@ -36,8 +36,6 @@
         flex-direction: row;
         gap: 2rem;
     }
-
-    /*! Revisar contadores */
   
   /* ========================================================================= */
   /* ========================================================================= */
@@ -100,7 +98,7 @@
 
     /* ========================================================================= */
     /* ========================================================================= */
-
+    
     /** ASIDE Y ELEMENTOS */
 
     header{
@@ -124,6 +122,9 @@
 
         padding: 5%;
         background-color: whitesmoke;
+
+        /* solo añadi el gap para probar el reinicio de colores */
+        gap: 10px; 
     }
     
     .colorElegible{
@@ -132,4 +133,65 @@
         padding: 8px;  
     }
     
+/*? ========================================================================= */
+/*? ========================================================================= */
     
+    /*? Estilos caja fin del juego */
+
+    /*! Hace overflow (saca barra de scroll)  */
+
+div.fin {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: rgba(0, 0, 0, 0.500);
+}
+
+.mensajeFin {
+    height: 200px;
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 1rem; */
+
+    background-color: gainsboro;
+    border-radius: 5%;
+}
+
+
+#victoriaTxt {
+    color: green;
+    font-weight: bold;
+
+    margin-top: 1rem;
+}
+
+#derrotaTxt {
+    color: rgb(116, 2, 2);
+    font-weight: bold;
+
+    margin-top: 1rem;
+}
+
+#reset {
+    margin-top: 1.5rem;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 10%;
+}
+
+/* Ocultar */
+
+div.oculto {
+    display: none;
+}
