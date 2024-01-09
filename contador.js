@@ -18,7 +18,7 @@ function reiniciarPagina() {
   fallos = 0;
   actualizarContadores();
   // Aquí iría la lógica adicional para reiniciar otros elementos de la página si es necesario
-  location.reload(); // Esta línea recarga la página
+  // Esta línea recarga la página
 }
 
 // Event listener para cada color elegible
