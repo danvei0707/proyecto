@@ -16,6 +16,10 @@
 //     pantallaDerrota();
 // }
 
+const resetVictoria = document.getElementById('resetVictoria')
+
+
+
 //* Cambios en la pantalla
 
 export const pantallaVictoria = () => {
@@ -24,6 +28,14 @@ export const pantallaVictoria = () => {
     //? En pruebas
     let msgFinGanar = document.getElementById("finGanar");
     msgFinGanar.classList.remove("oculto");
+
+    console.log(document.getElementById('resetVictoria'))
+
+    resetVictoria.addEventListener('click', function() {
+        // Se limpia la pantalla de victoria
+        document.getElementById("finGanar").classList.add("oculto")
+        reiniciarPagina()
+      });
 
 }
 
