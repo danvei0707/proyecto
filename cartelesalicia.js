@@ -1,7 +1,7 @@
 function GenerarCarteles (aciertos, fallos) {
     if (aciertos === 3) {
          ganar();
-    } if else (fallos === 3) {
+    }else if(fallos === 3) {
          perder();
     }
  }
