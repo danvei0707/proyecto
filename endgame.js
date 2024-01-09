@@ -1,33 +1,45 @@
 'use strict'
 //* Controlar los puntos p: Aciertos, Fallos.
-console.log(`El número de fallos es ${parseInt(document.getElementById("fallos").textContent)}`);
-console.log(`El número de aciertos es ${parseInt(document.getElementById("aciertos").textContent)}`);
+// console.log(`El número de fallos es ${parseInt(document.getElementById("fallos").textContent)}`);
+// console.log(`El número de aciertos es ${parseInt(document.getElementById("aciertos").textContent)}`);
  
 
 //* Comprueba los puntos y lanza Victoria o derrota
 
-export const compruebaPuntos = () => { 
-if (parseInt(document.getElementById("aciertos").textContent) === 3){
+// export const compruebaPuntos = () => { 
+// if (parseInt(document.getElementById("aciertos").textContent) === 3){
     
-    pantallaVictoria();
+//     pantallaVictoria();
 
-}else if (parseInt(document.getElementById("fallos").textContent) === 3)
+// }else if (parseInt(document.getElementById("fallos").textContent) === 3)
 
-    pantallaDerrota();
-}
+//     pantallaDerrota();
+// }
+
+const resetVictoria = document.getElementById('resetVictoria')
+
+
 
 //* Cambios en la pantalla
 
-const pantallaVictoria = () => {
+export const pantallaVictoria = () => {
     console.log("Victoria!")
 
     //? En pruebas
     let msgFinGanar = document.getElementById("finGanar");
     msgFinGanar.classList.remove("oculto");
 
+    console.log(document.getElementById('resetVictoria'))
+
+    resetVictoria.addEventListener('click', function() {
+        // Se limpia la pantalla de victoria
+        document.getElementById("finGanar").classList.add("oculto")
+        reiniciarPagina()
+      });
+
 }
 
-const pantallaDerrota = () => {
+export const pantallaDerrota = () => {
     console.log("Derrota!")
 
     //? En pruebas
@@ -43,7 +55,7 @@ const reset = () => {}
 
 //? ============= Pruebas =========================================================
 
-compruebaPuntos();
+// compruebaPuntos();
 
 //Revisar ID's en tu html
 let resetDerrota = document.getElementById("resetDerrota")

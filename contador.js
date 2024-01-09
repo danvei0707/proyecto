@@ -4,6 +4,10 @@
 const contAciertos = document.querySelector('.contAciertos p:last-child');
 const contFallos = document.querySelector('.contFallos p:last-child');
 const coloresElegibles = document.querySelectorAll('.colorElegible');
+// const resetVictoria = document.getElementById('resetVictoria')
+
+
+import { pantallaVictoria, pantallaDerrota} from "./endgame.js";
 
 let aciertos = 0;
 let fallos = 0;
@@ -20,7 +24,7 @@ function reiniciarPagina() {
   fallos = 0;
   actualizarContadores();
   // Aquí iría la lógica adicional para reiniciar otros elementos de la página si es necesario
-  // location.reload(); // Esta línea recarga la página
+  // Esta línea recarga la página
 }
 
 // Event listener para cada color elegible
@@ -38,7 +42,18 @@ coloresElegibles.forEach((color, index) => {
     }
 
     // Verificar si se ha alcanzado el límite de aciertos o fallos
-   
-
+    if (aciertos === 3) {
+        pantallaVictoria()
+        document.getElementById('resetVictoria').addEventListener('click', function() {
+          // Se limpia la pantalla de victoria
+          document.getElementById("finGanar").classList.add("oculto")
+          reiniciarPagina()
+        });
+        
+    } else if (fallos === 3) {
+        pantallaDerrota()
+        reiniciarPagina()
+    }
   });
 });
+
