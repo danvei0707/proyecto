@@ -124,6 +124,9 @@
 
         padding: 5%;
         background-color: whitesmoke;
+
+        /* solo añadi el gap para probar el reinicio de colores */
+        gap: 10px; 
     }
     
     .colorElegible{
