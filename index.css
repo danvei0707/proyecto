@@ -200,3 +200,10 @@ div.fin {
 div.oculto {
     display: none;
 }
+
+@media (max-width: 667px) {
+    .gridPadre{
+        grid-template-columns: repeat(1 , 1fr);
+        grid-template-rows:  repeat(8 , 1fr);
+    }
+}
