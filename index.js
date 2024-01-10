@@ -1,16 +1,11 @@
 import { ColorAleatorio} from "./generar-colores-sin-repetir-Andrea.js";
-let lista_colores = [];
-let random = parseInt(Math.random() * 3)
-let color_correcto
+let lista_colores = []; // lista de colores vacia
+
+let color_correcto // color correcto
 
 function RandomColor() {
-  let {r , g ,b} = ColorAleatorio();
-  
-  switch(random){
-    case 0: r = 255; break;
-    case 1: g = 255; break;
-    case 2: b = 255; break;
-  }
+  let {r , g ,b} = ColorAleatorio(); // color aleatorio importado
+
   let color_variation = `rgb(${r},${g},${b})`
   return color_variation;
 }
@@ -23,7 +18,6 @@ function AssingColor(element, callback) {
   
   console.log(lista_colores);
   element.style.background = color;
-
 }
 
 function DivRandomColors() {
@@ -39,8 +33,6 @@ const grid_itemas = document.querySelectorAll(".colorElegible");
 grid_itemas.forEach((item) => {
   item.addEventListener("click", () => {
     lista_colores = []
-    random = parseInt(Math.random() * 3)
-
     DivRandomColors();
   });
 });
@@ -68,7 +60,6 @@ function CorrectRandomColorOnScreen(array) {
   color_correcto = color
 }
 CorrectRandomColorOnScreen(lista_colores);
-console.log(color_correcto);
 
 localStorage.setItem("Lista de colores", JSON.stringify(lista_colores));console;
 
