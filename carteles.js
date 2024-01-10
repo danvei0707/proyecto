@@ -1,10 +1,10 @@
-function GenerarCarteles (aciertos, fallos) {
-    if (aciertos === 3) {
-         ganar();
-    }else if(fallos === 3) {
-         perder();
-    }
- }
+// function GenerarCarteles (aciertos, fallos) {
+//     if (aciertos === 3) {
+//          ganar();
+//     }else if(fallos === 3) {
+//          perder();
+//     }
+//  }
  function ganar() {
     var w = window.open('','','width=100,height=100');
     var left = (screen.width - w.outerWidth) / 2;
