@@ -3,6 +3,8 @@ const contAciertos = document.querySelector('.contAciertos p:last-child');
 const contFallos = document.querySelector('.contFallos p:last-child');
 const coloresElegibles = document.querySelectorAll('.colorElegible');
 
+
+
 import { pantallaVictoria, pantallaDerrota} from "./endgame.js";
 
 let aciertos = 0;
@@ -38,10 +40,11 @@ coloresElegibles.forEach((color, index) => {
     // Verificar si se ha alcanzado el límite de aciertos o fallos
     if (aciertos === 3) {
         pantallaVictoria()
-        reiniciarPagina()
+        reiniciarPagina()  
     } else if (fallos === 3) {
         pantallaDerrota()
         reiniciarPagina()
     }
   });
 });
+
