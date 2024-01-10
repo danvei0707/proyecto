@@ -15,7 +15,6 @@ function AssingColor(element, callback) {
   let color = callback(); // Funcion de numero random
 
   lista_colores.push(color)
-  
   console.log(lista_colores);
   element.style.background = color;
 }
@@ -34,6 +33,7 @@ grid_itemas.forEach((item) => {
   item.addEventListener("click", () => {
     lista_colores = []
     DivRandomColors();
+    CorrectRandomColorOnScreen(lista_colores);
   });
 });
 
@@ -44,6 +44,7 @@ function CorrectRandomColorOnScreen(array) {
 
   // separar el codigo desde los paréntesis
   const random = parseInt(Math.random()* array.length)
+
   const color = array[random]
   console.log(random);
   let codigo = color.slice(color.indexOf("(") + 1, color.indexOf(")"));
