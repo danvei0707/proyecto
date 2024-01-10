@@ -12,7 +12,6 @@ import { pantallaVictoria, pantallaDerrota} from "./endgame.js";
 let aciertos = 0;
 let fallos = 0;
 
-
 // Función para actualizar los contadores en el DOM
 function actualizarContadores() {
   contAciertos.textContent = aciertos;
@@ -29,14 +28,10 @@ function reiniciarPagina() {
 }
 
 // Event listener para cada color elegible
-coloresElegibles.forEach((color) => {
+coloresElegibles.forEach((color, index) => {
   color.addEventListener('click', () => {
-    let color_correcto = localStorage.getItem("Color correcto")
-    console.log("Color correcto desde contador: "+color_correcto);
-    console.log("El background es: "+color.style.background);
-
     // Aquí iría la lógica para verificar si el color elegido es el correcto
-    if (color.style.background === color_correcto) {
+    if (index === 0) {
       aciertos++;
       actualizarContadores();
       compruebaPuntos();
@@ -46,7 +41,6 @@ coloresElegibles.forEach((color) => {
       compruebaPuntos();
     }
 
-    console.log("Color correcto desde contador2: "+color_correcto);
     // Verificar si se ha alcanzado el límite de aciertos o fallos
     if (aciertos === 3) {
         pantallaVictoria()
