@@ -1,31 +1,25 @@
-const colores = [
-  "rgb(255, 89, 94)",
-  "rgb(255, 202, 58)",
-  "rgb(138, 201, 38)",
-  "rgb(202, 103, 2)",
-  "rgb(25, 130, 196)",
-  "rgb(106, 76, 147)",
-  "rgb(141, 153, 174)",
-  "rgb(235, 136, 230)",
-];
+import { ColorAleatorio} from "./generar-colores-sin-repetir-Andrea.js";
+let lista_colores = []; // lista de colores vacia
 
-//guardar datos en LStorge
-localStorage.setItem("Lista de colores", colores);
+let color_correcto // color correcto
 
 function RandomColor() {
-  let random = parseInt(Math.random() * colores.length);
-  let color = colores[random];
+  let {r , g ,b} = ColorAleatorio(); // color aleatorio importado
 
-  // devuleve un color aleatoreo
-  return color;
+  let color_variation = `rgb(${r}, ${g}, ${b})`
+  return color_variation;
 }
+
 
 function AssingColor(element, callback) {
   let color = callback(); // Funcion de numero random
-  element.style.background = color; // agregar color
+
+  lista_colores.push(color)
+  console.log(lista_colores);
+  element.style.background = color;
+  element.textContent = color
 }
 
-// añadir colores elemento a elemento
 function DivRandomColors() {
   grid_itemas.forEach((item) => {
     AssingColor(item, RandomColor);
@@ -38,28 +32,41 @@ const grid_itemas = document.querySelectorAll(".colorElegible");
 // reinicia la secuencia de colores
 grid_itemas.forEach((item) => {
   item.addEventListener("click", () => {
+    lista_colores = []
     DivRandomColors();
+    CorrectRandomColorOnScreen(lista_colores);
   });
 });
 
 DivRandomColors();
 
 //añadir el color
-function CorrectRandomColorOnScreen(random_color) {
-  //separar el codigo desde los paréntesis
-  const color = random_color.slice(
-    random_color.indexOf("(") + 1,
-    random_color.indexOf(")")
-  );
+function CorrectRandomColorOnScreen(array) {
+
+
+   let random = parseInt(Math.random() * lista_colores.length)
+   let color_correcto = array[random] 
+   
+  localStorage.setItem("Color correcto",color_correcto)
+
+  // separar el codigo desde los paréntesis
+  
+  const color = localStorage.getItem("Color correcto")
+  console.log(" correcto es "+color);
+  let codigo = color.slice(color.indexOf("(") + 1, color.indexOf(")"));
 
   // agrega el codigo del color y cambia el estilo de texto a bold
   const div_rbg = document.querySelector(".rgb");
-  div_rbg.textContent = color;
+  div_rbg.textContent = codigo;
   div_rbg.style.fontWeight = "bold";
-  
-  // Muestra el color correcto
-  const div_sample = document.querySelector(".sample")
-  div_sample.style.background = random_color
-}
 
-CorrectRandomColorOnScreen(RandomColor());
+  // Muestra el color correcto
+  const div_sample = document.querySelector(".sample");
+  div_sample.style.background = color;
+
+}
+CorrectRandomColorOnScreen(lista_colores);
+
+localStorage.setItem("Lista de colores", JSON.stringify(lista_colores));console;
+
+;
