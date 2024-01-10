@@ -96,6 +96,10 @@
         width: 180px;
     }
 
+    .contAciertos {
+        
+    }
+
     /* ========================================================================= */
     /* ========================================================================= */
     
@@ -202,8 +206,16 @@ div.oculto {
 }
 
 @media (max-width: 667px) {
-    .gridPadre{
-        grid-template-columns: repeat(1 , 1fr);
-        grid-template-rows:  repeat(8 , 1fr);
+    body {
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .gridPadre {
+        height: 100%;
+    }
+
+    header {
+        height: 15%;
     }
 }
