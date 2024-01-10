@@ -15,7 +15,7 @@ function AssingColor(element, callback) {
   let color = callback(); // Funcion de numero random
 
   lista_colores.push(color)
-  console.log(lista_colores);
+  // console.log(lista_colores);
   element.style.background = color;
   element.textContent = color
 }
