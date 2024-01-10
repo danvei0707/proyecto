@@ -6,7 +6,7 @@ const coloresElegibles = document.querySelectorAll('.colorElegible');
 
 
 import { pantallaVictoria, pantallaDerrota} from "./endgame.js";
-
+import {perder, ganar} from "./carteles.js"
 let aciertos = 0;
 let fallos = 0;
 
@@ -35,9 +35,11 @@ coloresElegibles.forEach((color) => {
 
     // Aquí iría la lógica para verificar si el color elegido es el correcto
     if (color.style.background === color_correcto) {
+      ganar();
       aciertos++;
       actualizarContadores();
     } else {
+      perder();
       fallos++;
       actualizarContadores();
     }
