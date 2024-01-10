@@ -1,18 +1,28 @@
-function generarVariacionesDeColor(colorCorrecto, coloresGenerados) {
-    
-    let variacionDeColor;
-    // Aquí estará el nuevo color similar generado.
+let random = parseInt(Math.random() * 3);
 
-    do {
-        // Usamos el bucle 'do while' para generar similares hasta encontar uno que no esté repetido.
-        variacionDeColor = colorCorrecto.split(", ").map(componente => {
-            // Genera un nuevo color similar a partir del correcto. 
-            return Math.min(255, Math.max(0, parseInt(componente) + Math.floor(Math.random() * 30) - 15));
-            // Aquí se genera una variación aleatoria en el rango de - 15 a + 15.
-        });
-    } while (coloresGenerados.includes(`rgb(${variacionDeColor.join(", ")})`) || variacionDeColor.join(", ") === colorCorrecto); 
-    // Verifica si el color similar ya está en la lista de colores generados, para que no se repitan.
-
-    return `rgb(${variacionDeColor.join(", ")})`;
-        
-}
+export const ColorAleatorio = function generarVariacionesDeColor() {
+  // se genera el codigo rgb aleatorio
+  let r = parseInt(Math.random() * 240),
+    g = parseInt(Math.random() * 240), // evitar la aproximacion entre colores
+    b = parseInt(Math.random() * 240);
+  // escogemos una saturacion entre rojo , azul y verde
+  switch (random) {
+    case 0:
+      r = 255;
+      break;
+    case 1:
+      g = 255;
+      break;
+    case 2:
+      b = 255;
+      break;
+  }
+  return { r, g, b };
+};
+// escoger nueva saturacion
+const grid_itemas = document.querySelectorAll(".colorElegible");
+grid_itemas.forEach((item) => {
+  item.addEventListener("click", () => {
+    random = parseInt(Math.random() * 3);
+  });
+});

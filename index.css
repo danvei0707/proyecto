@@ -134,7 +134,7 @@
     }
     .puntaje { height: 100px; width: 300px; background-color: blanchedalmond;
      text-align: center; display: flex; justify-content: center; align-items:center ; position:absolute;
-     left:50%;top:50%; translate: -50% -50%; w
+     left:50%;top:50%; translate: -50% -50%; 
     }
 
 
@@ -143,7 +143,7 @@
     
     /*? Estilos caja fin del juego */
 
-    /*! Hace overflow (saca barra de scroll)  */
+    /* Hace overflow (saca barra de scroll)  */
 
 div.fin {
     position: absolute;
@@ -188,7 +188,7 @@ div.fin {
     margin-top: 1rem;
 }
 
-#reset {
+.mensajeFin > button {
     margin-top: 1.5rem;
     border: none;
     padding: 0.75rem;
