@@ -10,7 +10,7 @@ const puntaje= document.querySelector(".puntaje")
  export const ganar=() => {
    
    puntaje.classList.remove("oculto")
-    informacion.textContent="¡Ganaste!"
+    informacion.textContent="¡Correcto!"
     informacion.style.color="green"
     setTimeout(function() {puntaje.classList.add("oculto")}, 1500);
    
@@ -18,7 +18,7 @@ const puntaje= document.querySelector(".puntaje")
  export const perder=() => { 
    
     puntaje.classList.remove("oculto")
-    informacion.textContent="¡Perdiste!"
+    informacion.textContent="¡Error!"
     informacion.style.color="red"
     setTimeout(function() {puntaje.classList.add("oculto")}, 1500);
  }
