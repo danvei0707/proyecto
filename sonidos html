@@ -1,0 +1,20 @@
+
+<div id="perdiste">
+	<span id="play">play</span>
+	<span id="stop">stop</span>
+	<!-- <iframe src="perder-incorrecto-no-valido.mp3" controls>
+	</iframe> -->
+</div>
+
+<div id="ganaste">
+	<span id="play">play</span>
+	<span id="stop">stop</span>
+	<!-- <iframe src="bites-ta-da-winner.mp3" controls>
+	</iframe> -->
+</div>
+<div id="mouse">
+	<span id="play">play</span>
+	<span id="stop">stop</span>
+	<!-- <iframe src="pick-92276.mp3" controls>
+	</iframe> -->
+</div>
