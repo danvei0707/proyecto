@@ -1,6 +1,14 @@
 /*? Diseño del CSS básico combinado*/
 
 
+h1 {
+    font-family: 'Bungee Spice', sans-serif;
+}
+
+h1 > p {
+    font-family: 'Bungee Spice', sans-serif;
+}
+
 /** CARACTERÍSTICAS BÁSICAS */
 
 * {
@@ -14,7 +22,7 @@
         height: 100vh;
         grid-template-columns: 1fr  1fr;
         grid-template-rows: 10% 1fr;
-    grid-template-areas: 
+        grid-template-areas: 
         'header header'
         'main gird-padre';
         background-color: rgba(0, 186, 22, 0.023);
@@ -94,7 +102,7 @@
         margin-top: 2rem;;
         display: flex;
         gap: 4rem;
-
+        
         font-size: 1.5rem;
     }
 
@@ -102,7 +110,9 @@
         text-align: center;
         border: 2px solid black;
         padding: 1rem;
-
+        box-shadow: 10px 10px 5px #0000007a;
+        font-family: 'Abel', sans-serif;
+        font-weight: bold;
         width: 180px;
     }
 
@@ -124,6 +134,7 @@
     .gridPadre{
         display: grid;
         grid-area: gird-padre;
+        
 
         grid-template-columns: repeat(2 , 1fr);
         grid-template-rows:  repeat(4 , 1fr);
@@ -140,10 +151,23 @@
         background-color: pink;
         border: 1px solid black;
         padding: 8px;  
+        box-shadow: 10px 10px 5px #0000007a;
+        font-family: 'Abel', sans-serif;
+        font-weight: bold;
+        font-size: 20px;
     }
-    .puntaje { height: 100px; width: 300px; background-color: blanchedalmond;
-     text-align: center; display: flex; justify-content: center; align-items:center ; position:absolute;
-     left:50%;top:50%; translate: -50% -50%; 
+
+    .puntaje {
+         height: 100px; 
+         width: 300px; 
+         background-color: blanchedalmond;
+         text-align: center; 
+         display: flex; 
+         justify-content: center; 
+         align-items:center; 
+         position:absolute;
+         left:50%;top:50%; 
+         translate: -50% -50%; 
     }
 
 
