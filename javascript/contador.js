@@ -29,7 +29,7 @@ function reiniciarPagina() {
 // Event listener para cada color elegible
 coloresElegibles.forEach((color) => {
   color.addEventListener('click', () => {
-    let color_correcto = localStorage.getItem("Color correcto")
+    let color_correcto = localStorage.getItem("Color_correcto")
     console.log("Color correcto desde contador: "+color_correcto);
     console.log("El background es: "+color.style.background);
 
