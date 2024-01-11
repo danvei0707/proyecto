@@ -8,9 +8,11 @@
 
 </head>
 <body>
-    <header class="centrado">
+    <header class="centrado" class = "color">
         
         <!-- Aquí iban los botones -->
+        <h1><strong>Adivina el color</strong></h1>
+                <p>Según el código RGB:</p>
         
     </header>
     
@@ -24,32 +26,27 @@
 
             <!-- Título -->
             <section class="enunciado">
-                <h1><strong>Adivina el color</strong></h1>
-                <p>Según el código RGB:</p>
+                
             </section>
            
             
-            <div class="actual">
-                <h2 class="rgb"> 
-                    <!-- cambie el nombre y el contedio xq se agrega desde el js -->
-                    <!-- <strong class="rgb1">255</strong>,<strong class="rgb2">0</strong>,<rgb3>0</rgb3> -->
-                </h2>
-                <div class="sample"></div>
+            <div class="actual ">
+                <h2 class="rgb"></h2>
             </div>
 
             <section class="contadores">
                 <div class="contAciertos">
-                <p>Aciertos:</p><p id="aciertos">0</p>
+                <p>Aciertos:</p><p>0</p>
                 </div>
                 
                 <div class="contFallos">
-                <p>Fallos:</p><p id="fallos">0</p>
+                <p>Fallos:</p><p>0</p>
                 </div>
             </section>
 
     </main>
 
-    <aside class="gridPadre">
+    <aside class="gridPadre background">
         <button class="colorElegible centrado">Color 1</button>
         <button class="colorElegible centrado">Color 2</button>
         <button class="colorElegible centrado">Color 3</button>
@@ -61,7 +58,9 @@
     </aside>
     
     <!-- añadi el script -->
-    
+<div class="puntaje oculto"> <h1 class="cartel"></h1></div>    
+
+
 
 <!--? ========================================================================================================================== -->
 
@@ -77,8 +76,7 @@
     </div>
 
             <!--! DERROTA  -->
-            <!-- Eliminé la clase oculto (pruebas) -->
-    <div id="finPerder" class="fin"> 
+    <div id="finPerder" class="fin oculto"> 
         <div class="mensajeFin">
             <h2>Fin del Juego</h2>
             <h1 id="derrotaTxt">PRUEBA DE NUEVO</h1>
@@ -89,13 +87,14 @@
         </div>   
     </div>
 
-    <script name="finalDelJuego" type="module" src="./endgame.js"></script>
+    
         
  <!--? ========================================================================================================================== -->
-    <script type="module" src="./cartelesalicia.js"></script>
-    <script type="module" src="./generar-colores-sin-repetir-Andrea.js"></script>
-    <script name="cuenta" type="module" src="./contador.js"></script>
-    <script type="module" src="./index.js"></script>
+    <script name="finalDelJuego" type="module" src="./javascript/endgame.js"></script>
+    <script type="module" src="./javascript/carteles.js"></script>
+    <script type="module" src="./javascript/generar-colores-sin-repetir-Andrea.js"></script>
+    <script name="cuenta" type="module" src="./javascript/contador.js"></script>
+    <script type="module" src="./javascript/Colores.js"></script>
 
 </body>
 </html>

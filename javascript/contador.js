@@ -1,5 +1,3 @@
-// import { pantallaDerrota , pantallaVictoria , compruebaPuntos} from "./endgame"
-
 // Obtener los elementos necesarios del DOM
 const contAciertos = document.querySelector('.contAciertos p:last-child');
 const contFallos = document.querySelector('.contFallos p:last-child');
@@ -8,7 +6,7 @@ const coloresElegibles = document.querySelectorAll('.colorElegible');
 
 
 import { pantallaVictoria, pantallaDerrota} from "./endgame.js";
-
+import {perder, ganar} from "./carteles.js"
 let aciertos = 0;
 let fallos = 0;
 
@@ -31,19 +29,19 @@ function reiniciarPagina() {
 // Event listener para cada color elegible
 coloresElegibles.forEach((color) => {
   color.addEventListener('click', () => {
-    let color_correcto = localStorage.getItem("Color correcto")
+    let color_correcto = localStorage.getItem("Color_correcto")
     console.log("Color correcto desde contador: "+color_correcto);
     console.log("El background es: "+color.style.background);
 
     // Aquí iría la lógica para verificar si el color elegido es el correcto
     if (color.style.background === color_correcto) {
+      ganar();
       aciertos++;
       actualizarContadores();
-      compruebaPuntos();
     } else {
+      perder();
       fallos++;
       actualizarContadores();
-      compruebaPuntos();
     }
 
     console.log("Color correcto desde contador2: "+color_correcto);

@@ -1,4 +1,4 @@
-import { ColorAleatorio} from "./generar-colores-sin-repetir2.js";
+import { ColorAleatorio} from "./generar-colores-sin-repetir-Andrea.js";
 let lista_colores = []; // lista de colores vacia
 
 let color_correcto // color correcto
