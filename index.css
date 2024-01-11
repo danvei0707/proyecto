@@ -108,12 +108,15 @@ h1 > p {
 
     .contadores > * {
         text-align: center;
-        border: 2px solid black;
+        border: 0.1px solid black;
         padding: 1rem;
         box-shadow: 10px 10px 5px #0000007a;
         font-family: 'Abel', sans-serif;
         font-weight: bold;
         width: 180px;
+        border: 0.1px solid rgba(212, 212, 212, 0.25);
+        background: linear-gradient(187deg, transparent 0%, rgba(0,0,0,0.32) 100%); 
+
     }
 
     /* ========================================================================= */
@@ -145,7 +148,7 @@ h1 > p {
     
     .colorElegible{
         background-color: pink;
-        border: 1px solid black;
+        border: 0.1px solid rgba(212, 212, 212, 0.25);
         padding: 8px;  
         box-shadow: 10px 10px 5px #0000007a;
         font-family: 'Abel', sans-serif;
