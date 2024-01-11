@@ -106,6 +106,10 @@
         width: 180px;
     }
 
+    .contAciertos {
+        
+    }
+
     /* ========================================================================= */
     /* ========================================================================= */
     
@@ -137,13 +141,18 @@
         border: 1px solid black;
         padding: 8px;  
     }
-    
+    .puntaje { height: 100px; width: 300px; background-color: blanchedalmond;
+     text-align: center; display: flex; justify-content: center; align-items:center ; position:absolute;
+     left:50%;top:50%; translate: -50% -50%; 
+    }
+
+
 /*? ========================================================================= */
 /*? ========================================================================= */
     
     /*? Estilos caja fin del juego */
 
-    /*! Hace overflow (saca barra de scroll)  */
+    /* Hace overflow (saca barra de scroll)  */
 
 div.fin {
     position: absolute;
@@ -200,4 +209,19 @@ div.fin {
 
 div.oculto {
     display: none;
+}
+
+@media (max-width: 667px) {
+    body {
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .gridPadre {
+        height: 100%;
+    }
+
+    header {
+        height: 15%;
+    }
 }
