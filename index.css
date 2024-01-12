@@ -159,7 +159,7 @@ header{
     .puntaje {
          height: 100px; 
          width: 300px; 
-         background-color: blanchedalmond;
+         background-color: rgba(0, 0, 0, 0.22);
          font-family: 'Bungee Spice', sans-serif;
          text-align: center; 
          display: flex; 
@@ -167,8 +167,25 @@ header{
          align-items:center; 
          position:absolute;
          left:50%;top:50%; 
-         translate: -50% -50%; 
+         translate: -50% -50%;
+         animation: expandirYRebotar2 0.2s ease-in-out; 
     }
+
+    @keyframes expandirYRebotar2 {
+        0% {
+          opacity: 0; 
+          transform: scale(0); 
+        }
+        50% {
+          opacity: 1; 
+          transform: scale(1.2); 
+        }
+        100% {
+          transform: scale(1); 
+        }
+      }
+
+
 
 
 /*? ========================================================================= */
@@ -191,6 +208,7 @@ div.fin {
     
     background-color: rgba(0, 0, 0, 0.500);
     border-radius: 0px;
+
 }
 
 /* ESTILOS MENSAJE DERROTA -REINICIAR */
@@ -209,7 +227,23 @@ div.fin {
     
     background-color: rgba(219, 219, 219, 0.664);
     border-radius: 20px;
+    animation: expandirYRebotar 0.5s ease-in-out;
 }
+
+@keyframes expandirYRebotar {
+    0% {
+      opacity: 0; 
+      transform: scale(0); 
+    }
+    /* 50% {
+      opacity: 1; 
+      transform: scale(0.5); 
+    } */
+    100% {
+        opacity: 1;
+        transform: scale(1); 
+    }
+  }
 
 /* ESTILOS MENSAJE VICTORIA - CONTINUAR _________________________________________ */
 #finGanar > div.mensajeFin {
@@ -251,7 +285,17 @@ button#continueGame , button#resetGame1 , button#resetGame2 {
 
 div.oculto {
     display: none;
+    animation: desvanecer 1s ease-in-out;
 }
+
+@keyframes desvanecer {
+    from {
+      opacity: 1; 
+    }
+    to {
+      opacity: 0; 
+    }
+  }
 
 @media (max-width: 667px) {
     body {
