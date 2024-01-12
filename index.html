@@ -27,7 +27,7 @@
 
             <!-- Imagen -->
             <!-- <div class="ruedaDeColor"><img class="ruedaDeColor" src="https://raw.githubusercontent.com/ProgramoErgoSum/Tutoriales/master/v1/led-rgb-del-robot-mbot/img/colores-rgb.jpg" alt="Rueda de colores" width="400px"></div> -->
-            <div class="ruedaDeColor"><img class="ruedaDeColor" src="./images/manchaColor.jpg" alt="Mancha de color"></div>
+            <div class="ruedaDeColor"><img class="ruedaDeColor" src="./images/manchaColor.png" alt="Mancha de color"></div>
 
             <!-- Título -->
             <section class="enunciado">
@@ -72,23 +72,23 @@
             <!--* VICTORIA -->
     <div id="finGanar" class="fin oculto"> 
     <div class="mensajeFin">
-        <h2>Fin del Juego</h2>
-        <h1 id="victoriaTxt" class="victoria">HAS GANADO</h1>
+        <h1 id="victoriaTxt" class="victoria">ENHORABUENA</h1>
         <span class="victoria">¡Has acertado correctamente 3 colores!</span>
+        <span>A partir de ahora podrás continuar jugando de manera infinita hasta que acumules 3 errores, ¡no será tan fácil! </span>
 
-        <button id="resetVictoria">Volver a jugar</button>
+        
+        <div><button id="continueGame">Siguiente nivel</button> <button id="resetGame1">Reiniciar</button></div>
     </div>   
     </div>
 
             <!--! DERROTA  -->
     <div id="finPerder" class="fin oculto">
         <div class="mensajeFin">
-            <h2>Fin del Juego</h2>
             <h1 id="derrotaTxt">PRUEBA DE NUEVO</h1>
             <span>Has fallado 3 colores</span>
 
             
-            <button id="resetDerrota">Volver a jugar</button>
+            <button id="resetGame2">Volver a jugar</button>
         </div>   
     </div>
 

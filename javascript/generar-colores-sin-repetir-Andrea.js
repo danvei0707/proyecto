@@ -25,7 +25,7 @@ export const GenerarVariacion = () => {
 
   // escogemos una saturacion entre rojo , azul y verde
 
-  console.log(r, g, b);
+  // console.log(r, g, b);
   switch (random) {
     case 0:
       r += 9;
@@ -40,7 +40,7 @@ export const GenerarVariacion = () => {
       console.log("Resta");
       break;
   }
-  console.log(r);
+  // console.log(r);
 
   if (r > 255 || g > 255 || b > 255 || r < 0 || g < 0 || b < 0) {
     alert("Numero fuera de rango");
