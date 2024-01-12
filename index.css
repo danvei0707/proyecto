@@ -1,7 +1,15 @@
-/*? Diseño del CSS básico combinado*/
+/** CARACTERÍSTICAS BÁSICAS */
 
+* {
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 15px;
+    
+    font-family: 'Abel', sans-serif;
+    font-weight: bold;
+}
 
-h1 {
+h1 , h1 > strong {
     font-family: 'Bungee Spice', sans-serif;
 }
 
@@ -9,47 +17,39 @@ h1 > p {
     font-family: 'Bungee Spice', sans-serif;
 }
 
-/** CARACTERÍSTICAS BÁSICAS */
-
-* {
-    margin: 0;
-    box-sizing: border-box;
-    border-radius: 15px;
+body{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr  1fr;
+    grid-template-rows: 10% 1fr;
+    grid-template-areas: 
+    'header header'
+    'main gird-padre';
+    background-color: rgba(0, 186, 22, 0.023);
+    border-radius: 0px;
 }
 
-    body{
-        display: grid;
-        height: 100vh;
-        grid-template-columns: 1fr  1fr;
-        grid-template-rows: 10% 1fr;
-        grid-template-areas: 
-        'header header'
-        'main gird-padre';
-        background-color: rgba(0, 186, 22, 0.023);
-        border-radius: 0px;
-    }
 
-
-    .centrado{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.centrado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
     
-    /* ========================================================================= */
-    /* ========================================================================= */
-    
-    /** HEADER Y ELEMENTOS */
-    
-    header{
-        flex-direction: column;
-        font-size: 20px;
+/* ========================================================================= */
+/* ========================================================================= */
 
-        background-color: rgb(64, 46, 0);
-        grid-area: header;
-        border-radius: 0px;
-    }
+/** HEADER Y ELEMENTOS */
+
+header{
+    flex-direction: column;
+    font-size: 100%;
+
+    background-color: rgb(64, 46, 0);
+    grid-area: header;
+    border-radius: 0px;
+}
   
   /* ========================================================================= */
   /* ========================================================================= */
@@ -83,14 +83,7 @@ h1 > p {
         gap: 1.5rem;
         align-items: center;
     }
-/* 
-    .sample {
-        height: 30px;
-        width: 30px;
 
-        background-color: rgb(255, 0, 0);
-    } */
-    
     .ruedaDeColor {
 
         /* La imagen */
@@ -111,20 +104,16 @@ h1 > p {
         border: 0.1px solid black;
         padding: 1rem;
         box-shadow: 10px 10px 5px #0000007a;
-        font-family: 'Abel', sans-serif;
-        font-weight: bold;
+
         width: 180px;
         border: 0.1px solid rgba(212, 212, 212, 0.25);
         background: linear-gradient(187deg, transparent 0%, rgba(0,0,0,0.32) 100%); 
-
     }
 
     /* ========================================================================= */
     /* ========================================================================= */
     
-    /** ASIDE Y ELEMENTOS */
-
-    
+    /** ASIDE Y ELEMENTOS */ 
     
     main{
         grid-area: main;
@@ -188,24 +177,43 @@ div.fin {
     align-items: center;
     text-align: center;
 
+
+    /* Fondo Sombreado */
     background-color: rgba(0, 0, 0, 0.500);
     border-radius: 0px;
 }
 
+/* ESTILOS MENSAJE DERROTA -REINICIAR */
 .mensajeFin {
+    
+    /* Caja Mensaje "Fin" */
+    
     height: 200px;
     width: 400px;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     /* gap: 1rem; */
-
-    background-color: gainsboro;
-    border-radius: 5%;
+    
+    background-color: rgba(219, 219, 219, 0.664);
+    border-radius: 20px;
 }
 
+/* ESTILOS MENSAJE VICTORIA - CONTINUAR _________________________________________ */
+#finGanar > div.mensajeFin {
+    gap: 0.5rem;
+    height: 300px;
+}
+
+div.mensajeFin > div{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    /* background-color: red; */
+}
+/* ______________________________________________________________________________ */
 
 #victoriaTxt {
     color: green;
@@ -221,11 +229,11 @@ div.fin {
     margin-top: 1rem;
 }
 
-.mensajeFin > button {
+button#continueGame , button#resetGame1 , button#resetGame2 {
     margin-top: 1.5rem;
     border: none;
     padding: 0.75rem;
-    border-radius: 10%;
+    border-radius: 30px;
 }
 
 /* Ocultar */
