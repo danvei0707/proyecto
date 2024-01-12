@@ -1,13 +1,22 @@
 /*? Diseño del CSS básico combinado*/
 
-
-h1 {
-    font-family: 'Bungee Spice', sans-serif;
+.centrado > h1 > strong {
+    font-family: 'Lifters', sans-serif;
+    background: linear-gradient(130deg, #01070c 0%, #192634 100%);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
-h1 > p {
-    font-family: 'Bungee Spice', sans-serif;
+.centrado > p {
+    font-family: 'Game Paused DEMO', sans-serif;
+    font-size: 25px;
+    background: linear-gradient(130deg, #01070c 0%, #192634 100%);
+    -webkit-background-clip: text;
+    color: transparent;
 }
+
+
+
 
 /** CARACTERÍSTICAS BÁSICAS */
 
@@ -34,6 +43,7 @@ h1 > p {
         display: flex;
         justify-content: center;
         align-items: center;
+        
     }
 
     
@@ -60,6 +70,7 @@ h1 > p {
     .main {
         flex-direction: column;
         gap: 2rem;
+
     }
 
     .enunciado {
@@ -157,6 +168,7 @@ h1 > p {
          height: 100px; 
          width: 300px; 
          background-color: blanchedalmond;
+         font-family: 'Bungee Spice', sans-serif;
          text-align: center; 
          display: flex; 
          justify-content: center; 
@@ -178,13 +190,13 @@ div.fin {
     position: absolute;
     height: 99.99vh;
     width: 100%;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-
+    
     background-color: rgba(0, 0, 0, 0.500);
     border-radius: 0px;
 }
@@ -192,7 +204,7 @@ div.fin {
 .mensajeFin {
     height: 200px;
     width: 400px;
-
+    font-family: 'Crimen en Levante', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -207,14 +219,14 @@ div.fin {
 #victoriaTxt {
     color: green;
     font-weight: bold;
-
+    font-family: 'Bungee Spice', sans-serif;
     margin-top: 1rem;
 }
 
 #derrotaTxt {
     color: rgb(116, 2, 2);
     font-weight: bold;
-
+    font-family: 'Bungee Spice', sans-serif;
     margin-top: 1rem;
 }
 
@@ -223,6 +235,7 @@ div.fin {
     border: none;
     padding: 0.75rem;
     border-radius: 10%;
+    
 }
 
 /* Ocultar */
