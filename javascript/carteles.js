@@ -11,7 +11,7 @@ const puntaje= document.querySelector(".puntaje")
    
    puntaje.classList.remove("oculto")
     informacion.textContent="¡Ganaste!"
-    informacion.style.color="green"
+   //  informacion.style.color="green"
     setTimeout(function() {puntaje.classList.add("oculto")}, 1500);
    
  }
@@ -19,7 +19,7 @@ const puntaje= document.querySelector(".puntaje")
    
     puntaje.classList.remove("oculto")
     informacion.textContent="¡Perdiste!"
-    informacion.style.color="red"
+   //  informacion.style.color="red"
     setTimeout(function() {puntaje.classList.add("oculto")}, 1500);
  }
  

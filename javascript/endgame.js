@@ -1,4 +1,4 @@
-'use strict'
+// 'use strict'
 //* Controlar los puntos p: Aciertos, Fallos.
 // console.log(`El número de fallos es ${parseInt(document.getElementById("fallos").textContent)}`);
 // console.log(`El número de aciertos es ${parseInt(document.getElementById("aciertos").textContent)}`);

@@ -1,3 +1,5 @@
+import { AplicarColoresInterfaz } from "./colores-interfaz.js";
+
 const contFallos = document.querySelector('.contFallos p:last-child');
 
 let rangomin = 72;
@@ -6,9 +8,12 @@ let nivel = 0
 let num = 9
 
 function Niveles(){
-  console.log("Numeros de niveles");
+  console.log("Numeros de niveles "+nivel);
   if(nivel === 3){
+    rangomin = 72;
+    rangomax = 183;
     nivel = 0
+    num = 9
   }else if(contFallos.textContent == 2){
     rangomax += 8
     rangomin += 8
@@ -22,20 +27,7 @@ function Niveles(){
   }
 }
 
-function AplicarColoresInterfaz(r,g,b){
-  let body = document.querySelector("body")
-  body.style.background = `rgb(${r+43} ,${g+43} ,${b+43})`
-  
-  let header = document.querySelector("header")
-  header.style.background = `rgb(${r - 10} ,${g - 20} ,${b -30})`
 
-  let carteles = document.querySelector(".puntaje")
-  carteles.style.background = `rgb(${r+4} ,${g+4} ,${b+4} ,0.50)`
-
-  
-  const sombra = document.querySelector(".enunciado");
-  sombra.style.boxShadow = `26px 26px 51px rgb(${r - 20} ,${g - 20} ,${b -20}),-26px -26px 51px rgb(${r + 100} ,${g + 100} ,${b +100})`;
-}
 
 function GenerarNumeros() {
   Niveles()

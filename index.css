@@ -107,9 +107,6 @@
         width: 180px;
     }
 
-    .contAciertos {
-        
-    }
 
     /* ========================================================================= */
     /* ========================================================================= */
@@ -142,11 +139,25 @@
         border: 1px solid black;
         padding: 8px;  
     }
-    .puntaje { height: 10rem; width: 15rem; 
-     text-align: center; display: flex; justify-content: center; align-items:center ; position:absolute;
-     left:50%;top:50%; translate: -50% -50%;
-     font-size: 20px; 
+    .puntaje { 
+        height: 10rem;
+        width: 15rem;
+        
+        display: flex;
+
+        text-align: center;
+        justify-content:center;
+        align-items: center;
+        position: absolute;
+
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+        font-size: 200%;
     }
+    /* .puntaje > h1{
+        text-shadow: 0 0 2px red;
+    } */
 
 
 /*? ========================================================================= */
@@ -172,35 +183,39 @@ div.fin {
 }
 
 .mensajeFin {
-    height: 200px;
-    width: 400px;
+    height: 30%;
+    width: 45%;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+
     align-items: center;
     /* gap: 1rem; */
-
-    background-color: gainsboro;
-    border-radius: 5%;
+    border-radius: 10px
+}
+.mensajeFin > h2{
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    height: 30%;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
 }
 
 
-#victoriaTxt {
-    color: green;
+.text_fin{
     font-weight: bold;
-
     margin-top: 1rem;
 }
+
 
 #derrotaTxt {
-    color: rgb(116, 2, 2);
     font-weight: bold;
 
     margin-top: 1rem;
 }
 
-.mensajeFin > button {
+.button_color{
     margin-top: 1.5rem;
     border: none;
     padding: 0.75rem;
