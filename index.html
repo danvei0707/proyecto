@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adivina el color</title>
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Bungee+Spice&family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Bungee+Spice&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
 
 </head>
@@ -22,7 +28,7 @@
 
             <!-- Imagen -->
             <!-- <div class="ruedaDeColor"><img class="ruedaDeColor" src="https://raw.githubusercontent.com/ProgramoErgoSum/Tutoriales/master/v1/led-rgb-del-robot-mbot/img/colores-rgb.jpg" alt="Rueda de colores" width="400px"></div> -->
-            <div class="ruedaDeColor"><img class="ruedaDeColor" src="./images/manchaColor.jpg" alt="Mancha de color"></div>
+            <div class="ruedaDeColor"><img class="ruedaDeColor" src="./images/manchaColor.png" alt="Mancha de color"></div>
 
             <!-- Título -->
             <section class="enunciado"> </section>
@@ -33,11 +39,11 @@
             </div>
 
             <section class="contadores">
-                <div class="contAciertos">
+                <div class="contAciertos contador">
                 <p>Aciertos:</p><p>0</p>
                 </div>
                 
-                <div class="contFallos">
+                <div class="contFallos contador">
                 <p>Fallos:</p><p>0</p>
                 </div>
             </section>
@@ -68,20 +74,22 @@
         <h2>Fin del Juego</h2>
         <h1 id="victoriaTxt" class="victoria text_fin">HAS GANADO</h1>
         <span class="victoria">¡Has acertado correctamente 3 colores!</span>
+        <span>A partir de ahora podrás continuar jugando de manera infinita hasta que acumules 3 errores, ¡no será tan fácil! </span>
 
-        <button id="resetVictoria" class="button_color">Volver a jugar</button>
+        
+        <div><button id="continueGame" class="button_color">Siguiente nivel</button> <button id="resetGame1" class="button_color">Reiniciar</button></div>
     </div>   
     </div>
 
             <!--! DERROTA  -->
-    <div id="finPerder" class="fin oculto "> 
+    <div id="finPerder" class="fin oculto"> 
         <div class="mensajeFin fondo">
             <h2>Fin del Juego</h2>
             <h1 id="derrotaTxt" class = "text_fin">PRUEBA DE NUEVO</h1>
             <span>Has fallado 3 colores</span>
 
             
-            <button id="resetDerrota" class="button_color">Volver a jugar</button>
+            <button id="resetGame2" class="button_color">Reiniciar</button>
         </div>   
     </div>
 

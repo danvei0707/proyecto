@@ -1,6 +1,20 @@
 import { AplicarColoresInterfaz } from "./colores-interfaz.js";
 
-const contFallos = document.querySelector('.contFallos p:last-child');
+function Buttons(name){
+  let button = document.querySelector(name)
+  button.addEventListener("click",()=>{
+    rangomax += 12
+    rangomin += 12
+    nivel++
+    num -= 2
+    console.log("este nivel es el: "+nivel);
+    console.log(rangomax);
+    console.log(rangomin);
+    console.log(num);
+
+  })  
+}
+Buttons("#continueGame")
 
 let rangomin = 72;
 let rangomax = 183;
@@ -14,16 +28,6 @@ function Niveles(){
     rangomax = 183;
     nivel = 0
     num = 9
-  }else if(contFallos.textContent == 2){
-    rangomax += 8
-    rangomin += 8
-    nivel++
-    num--
-
-    console.log(rangomax);
-    console.log(rangomin);
-    console.log(nivel);
-    console.log(num);
   }
 }
 
@@ -51,7 +55,7 @@ export const GenerarVariacion = () => {
 
   // escogemos una saturacion entre rojo , azul y verde
 
-  console.log(r, g, b);
+  // console.log(r, g, b);
   switch (random) {
     case 0:
       r += num;
@@ -66,7 +70,7 @@ export const GenerarVariacion = () => {
       console.log("Resta");
       break;
   }
-  console.log(r);
+  // console.log(r);
 
   if (r > 255 || g > 255 || b > 255 || r < 0 || g < 0 || b < 0) {
     alert("Numero fuera de rango");

@@ -49,7 +49,7 @@ function CorrectRandomColorOnScreen(array) {
   // separar el codigo desde los paréntesis
   
   const color = localStorage.getItem("Color_correcto")
-  console.log(" correcto es "+color);
+  // console.log(" correcto es "+color);
   let codigo = color.slice(color.indexOf("(") + 1, color.indexOf(")"));
 
   // agrega el codigo del color y cambia el estilo de texto a bold
