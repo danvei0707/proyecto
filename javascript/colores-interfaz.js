@@ -17,14 +17,18 @@ function Buttons(name,r ,g ,b){
 export const AplicarColoresInterfaz = (r,g,b) => {
   
     let body = document.querySelector("body")
-    body.style.background = `rgb(${r+43} ,${g+43} ,${b+43})`
+    body.style.background = `rgb(${r+90} ,${g+90} ,${b+90})`
     
     let header = document.querySelector("header")
     header.style.background = `rgb(${r - 5} ,${g - 5} ,${b -5})`
   
-    let carteles = document.querySelector(".puntaje > h1")
-    carteles.style.textShadow = `0 0 3px rgb(${r+100} ,${g+100} ,${b+100})`
-    carteles.style.color = `rgb(${r-90} ,${g-90} ,${b-90})`
+    let carteles = document.querySelectorAll(".centrado")
+    console.log(carteles)
+
+    carteles.forEach((item)=>{
+      item.style.textShadow = `0 0 3px rgb(${r+120} ,${g+120} ,${b+120})`
+      item.style.color = `rgb(${r-100} ,${g-100} ,${b-100})`
+    })
 
     Buttons("#resetGame2",r ,g ,b)
     Buttons("#resetGame1",r ,g ,b)

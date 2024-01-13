@@ -7,18 +7,43 @@
 //  }
 const informacion= document.querySelector(".cartel")
 const puntaje= document.querySelector(".puntaje")
+
+function Frase(frase1,frase2,frase3,frase4){
+  let lista = [1,2,3,4]
+  let random
+  random = lista[parseInt(Math.random()*lista.length)]
+    console.log(frase1);
+    console.log(random);
+    switch(random){
+      case 1 : informacion.textContent=`${frase1}`; break;
+      case 2 : informacion.textContent=`${frase2}`; break;
+      case 3: informacion.textContent=`${frase3}`; break;
+      case 4: informacion.textContent=`${frase4}`; break;
+}
+}
  export const ganar=() => {
    sonarGanaste()
    puntaje.classList.remove("oculto")
-    informacion.textContent="¡Correcto!"
+
+  Frase(
+    "Tus ojos y tu cerebro están en perfecta sincronización de colores hoy!",
+    "Creo que debería comprar un boleto de lotería, ¡porque elegiste el color correcto!",
+    "¡No sé cómo lo hiceste, pero la rueda de colores te eligió como su campeón!",
+    "¡Bravo! Incluso Pantone estaría orgulloso de tu elección de color.")   
+
     setTimeout(function() {puntaje.classList.add("oculto")}, 1500);
    
  }
  export const perder=() => { 
    sonarPerdiste()
     puntaje.classList.remove("oculto")
-    informacion.textContent="¡Error!"
-    setTimeout(function() {puntaje.classList.add("oculto")}, 1500);
+    Frase(
+      "En algún lugar, un arcoíris está llorando por tu elección de colores.",
+      "¡Quién necesita colores correctos cuando puedes tener una obra maestra; abstracta!",
+      "Vaya, mi visión de colores debe estar en huelga hoy!",
+      "Tu dedo y el color correcto deben estar en términos de separación temporal!"
+      )
+    setTimeout(function() {puntaje.classList.add("oculto")}, 5000);
  }
  
  function sonarGanaste(){
