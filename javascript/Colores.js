@@ -15,7 +15,7 @@ function AssingColor(element, callback) {
   lista_colores.push(color)
   // console.log(lista_colores);
   element.style.background = color;
-  element.textContent = color
+  // element.textContent = color
   // element.style.color = "white"
 }
 
@@ -41,8 +41,6 @@ DivRandomColors();
 
 //añadir el color
 function CorrectRandomColorOnScreen(array) {
-
-
    let random = parseInt(Math.random() * lista_colores.length)
    let color_correcto = array[random] 
    

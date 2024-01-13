@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adivina el color</title>
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Bungee+Spice&family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Bungee+Spice&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
+    <link rel="icon" type="image/png" href=".images/favicon-32x32.png>"
 
 </head>
 <body>
@@ -27,12 +29,10 @@
 
             <!-- Imagen -->
             <!-- <div class="ruedaDeColor"><img class="ruedaDeColor" src="https://raw.githubusercontent.com/ProgramoErgoSum/Tutoriales/master/v1/led-rgb-del-robot-mbot/img/colores-rgb.jpg" alt="Rueda de colores" width="400px"></div> -->
-            <div class="ruedaDeColor"><img class="ruedaDeColor" src="./images/manchaColor.png" alt="Mancha de color"></div>
+            <!-- <div class="ruedaDeColor"></div> -->
 
             <!-- Título -->
-            <section class="enunciado">
-                
-            </section>
+            <section class="enunciado"> </section>
            
             
             <div class="actual ">
@@ -40,11 +40,11 @@
             </div>
 
             <section class="contadores">
-                <div class="contAciertos">
+                <div class="contAciertos contador">
                 <p>Aciertos:</p><p>0</p>
                 </div>
                 
-                <div class="contFallos">
+                <div class="contFallos contador">
                 <p>Fallos:</p><p>0</p>
                 </div>
             </section>
@@ -52,14 +52,14 @@
     </main>
 
     <aside class="gridPadre background">
-        <button class="colorElegible centrado">Color 1</button>
-        <button class="colorElegible centrado">Color 2</button>
-        <button class="colorElegible centrado">Color 3</button>
-        <button class="colorElegible centrado">Color 4</button>
-        <button class="colorElegible centrado">Color 5</button>
-        <button class="colorElegible centrado">Color 6</button>
-        <button class="colorElegible centrado">Color 7</button>
-        <button class="colorElegible centrado">Color 8</button>
+        <button class="colorElegible centrado"><h1 class = "cartel_color"></h1></button>
+        <button class="colorElegible centrado"><h1 class = "cartel_color"></h1></button>
+        <button class="colorElegible centrado"><h1 class = "cartel_color"></h1></button>
+        <button class="colorElegible centrado"><h1 class = "cartel_color"></h1></button>
+        <button class="colorElegible centrado"><h1 class = "cartel_color"></h1></button>
+        <button class="colorElegible centrado"><h1 class = "cartel_color"></h1></button>
+        <button class="colorElegible centrado"><h1 class = "cartel_color"></h1></button>
+        <button class="colorElegible centrado"><h1 class = "cartel_color"></h1></button>
     </aside>
     
     <!-- añadi el script -->
@@ -72,23 +72,25 @@
             <!--* VICTORIA -->
     <div id="finGanar" class="fin oculto"> 
     <div class="mensajeFin">
-        <h1 id="victoriaTxt" class="victoria">ENHORABUENA</h1>
-        <span class="victoria">¡Has acertado correctamente 3 colores!</span>
+        <h2>Fin del Juego</h2>
+        <h1 id="victoriaTxt" class="victoria text_fin">HAS GANADO</h1>
+        <span class="victoria">"¡Acierto de color nivel experto desbloqueado!"</span>
         <span>A partir de ahora podrás continuar jugando de manera infinita hasta que acumules 3 errores, ¡no será tan fácil! </span>
 
         
-        <div><button id="continueGame">Siguiente nivel</button> <button id="resetGame1">Reiniciar</button></div>
+        <div><button id="continueGame" class="button_color">Siguiente nivel</button> <button id="resetGame1" class="button_color">Reiniciar</button></div>
     </div>   
     </div>
 
             <!--! DERROTA  -->
-    <div id="finPerder" class="fin oculto">
-        <div class="mensajeFin">
-            <h1 id="derrotaTxt">PRUEBA DE NUEVO</h1>
+    <div id="finPerder" class="fin oculto"> 
+        <div class="mensajeFin fondo">
+            <h2>Fin del Juego</h2>
+            <h1 id="derrotaTxt" class = "text_fin">PRUEBA DE NUEVO</h1>
             <span>Has fallado 3 colores</span>
 
             
-            <button id="resetGame2">Volver a jugar</button>
+            <button id="resetGame2" class="button_color">Reiniciar</button>
         </div>   
     </div>
 

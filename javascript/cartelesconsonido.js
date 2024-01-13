@@ -4,10 +4,11 @@
 //    }else if(fallos === 3) {
 //         perder();
 //   }
-// }
+// 
+
 const informacion= document.querySelector(".cartel")
 const puntaje= document.querySelector(".puntaje")
-export const ganar() => {
+export const ganar =() => {
  sonarGanaste()
  puntaje.classList.remove("oculto")
   informacion.textContent="¡Correcto!"
@@ -17,12 +18,12 @@ export const ganar() => {
 }
 function sonarGanaste(){
  var sonido = document.createElement("audio");
- sonido.scr="Sonidos/bites-ta-da-winner.mp3";
+ sonido.scr="../sonidos/bites-ta-da-winner.mp3";
  sonido.type="audio/mp3"
  sonido.play()
 }
 
-export const perder() => { 
+export const perder =() => { 
   sonarPerdiste()
   puntaje.classList.remove("oculto")
   informacion.textContent="¡Error!"
@@ -31,18 +32,18 @@ export const perder() => {
 }
 function sonarPerdiste(){
  var sonido = document.createElement("audio");
- sonido.scr="Sonidos/perder-incorrecto-no-valido.mp3";
+ sonido.scr="../sonidos/perder-incorrecto-no-valido.mp3";
  sonido.type="audio/mp3"
  sonido.play()
 
 // document.addEventListener("click",function(){
 // sonarMouse()
        
-});
+};
 
-function sonarMouse(){
+export const sonarMouse =() =>{
  var sonido= document.createElement("audio");
- sonido.src="Sonidos/pick-92276.mp3";
+ sonido.src="../sonidos/pick-92276.mp3";
  sonido.type="audio/mp3"
  sonido.play()
 //  document.body.appendChild(sonido.play);

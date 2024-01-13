@@ -1,20 +1,50 @@
+import { AplicarColoresInterfaz } from "./colores-interfaz.js";
+
+function Buttons(name){
+  let button = document.querySelector(name)
+  button.addEventListener("click",()=>{
+    rangomax += 12
+    rangomin += 12
+    nivel++
+    num -= 2
+    console.log("este nivel es el: "+nivel);
+    console.log(rangomax);
+    console.log(rangomin);
+    console.log(num);
+
+  })  
+}
+Buttons("#continueGame")
+
+let rangomin = 72;
+let rangomax = 183;
+let nivel = 0
+let num = 9
+
+function Niveles(){
+  console.log("Numeros de niveles "+nivel);
+  if(nivel === 3){
+    rangomin = 72;
+    rangomax = 183;
+    nivel = 0
+    num = 9
+  }
+}
+
+
+
 function GenerarNumeros() {
-  let r = parseInt(Math.random() * (183 - 72 + 1) + 72);
-  let g = parseInt(Math.random() * (183- 72 + 1) + 72);
-  let b = parseInt(Math.random() * (183 - 72 + 1) + 72);
+  Niveles()
+
+  let r = parseInt(Math.random() * (rangomax - rangomin + 1) + rangomin);
+  let g = parseInt(Math.random() * (rangomax - rangomin + 1) + rangomin);
+  let b = parseInt(Math.random() * (rangomax - rangomin + 1) + rangomin);
+
+  AplicarColoresInterfaz(r ,g , b)
+
   let random;
-
-  let body = document.querySelector("body")
-  body.style.background = `rgb(${r+43} ,${g+43} ,${b+43})`
-
-  let header = document.querySelector("header")
-  header.style.background = `rgb(${r - 10} ,${g - 20} ,${b -30})`
-
-  const div_sample = document.querySelector(".enunciado");
-  div_sample.style.boxShadow = `26px 26px 51px rgb(${r - 20} ,${g - 20} ,${b -20}),-26px -26px 51px rgb(${r + 100} ,${g + 100} ,${b +100})`;
-
   random = Math.floor(Math.random() * 2);
-
+  
   return [r, g, b, random];
 }
 
@@ -28,15 +58,15 @@ export const GenerarVariacion = () => {
   // console.log(r, g, b);
   switch (random) {
     case 0:
-      r += 9;
-      g += 9;
-      b += 9;
+      r += num;
+      g += num;
+      b += num;
       console.log("Suma");
       break;
     case 1:
-      r -= 9;
-      g -= 9;
-      b -= 9;
+      r -= num;
+      g -= num;
+      b -= num;
       console.log("Resta");
       break;
   }
