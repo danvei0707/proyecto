@@ -205,6 +205,14 @@
         text-shadow: 0 0 2px red;
     } */
 
+    button.colorElegible:hover{
+        animation: reboteMouse 0.2s forwards; 
+    }
+
+    @keyframes reboteMouse {
+        0%{ scale: 100%;
+        }100%{  scale: 102%; }
+    }
 
 /*? ========================================================================= */
 /*? ========================================================================= */
