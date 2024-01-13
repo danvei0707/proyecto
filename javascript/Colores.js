@@ -10,13 +10,10 @@ function RandomColor() {
 
 
 function AssingColor(element, callback) {
-  let color = callback(); // Funcion de numero random
-
+  let color = callback(); 
   lista_colores.push(color)
-  // console.log(lista_colores);
   element.style.background = color;
-  element.textContent = color
-  // element.style.color = "white"
+
 }
 
 function DivRandomColors() {
