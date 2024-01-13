@@ -150,6 +150,15 @@
         font-size: 20px;
     }
 
+    button.colorElegible:hover{
+        animation: reboteMouse 0.2s forwards; 
+    }
+
+    @keyframes reboteMouse {
+        0%{ scale: 100%;
+        }100%{  scale: 102%; }
+    }
+
     /* .puntaje {
          height: 100px; 
          width: 300px; 
@@ -216,6 +225,16 @@
           transform: scale(1); 
         }
       }
+
+     @keyframes zoom-rebote {
+    
+        0%{scale: 0%;
+        }50%{scale: 120%;
+        }100%{
+            scale: 100%;
+        }
+    }
+    
     /* .puntaje > h1{
         text-shadow: 0 0 2px red;
     } */
@@ -260,7 +279,7 @@ div.fin {
     
     background-color: rgba(219, 219, 219, 0.664);
     border-radius: 20px;
-    animation: expandir 0.5s ease-in-out;
+    animation: rebote 0.5s ease-in-out;
 }
 
 @keyframes expandir {
