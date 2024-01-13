@@ -250,4 +250,28 @@ div.oculto {
     header {
         height: 15%;
     }
+
+    .puntaje {
+        height: 100px; 
+        width: 300px; 
+        font-family: 'Bungee Spice', sans-serif;
+        text-align: center; 
+        display: flex; 
+        justify-content: center; 
+        align-items:center; 
+        left:50%;top:50%; 
+        animation: expandirYRebotar 0.2s ease-in-out; 
+   }
+
+   .cartel {
+    font-size: 22px;
+   }
+
+   main {
+    height: 90%;
+   }
+
+   aside {
+    height: 10%;
+   }
 }
