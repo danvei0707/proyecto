@@ -44,14 +44,22 @@ export const pantallaDerrota = () => {
   });
 
 }
+export const inicio = () => {
+  
+  let startButton = document.getElementById("start")
+  console.log(document.getElementById("start"));
+  
+  let intro = document.getElementById("intro");
+  console.log(intro)
+  intro.classList.remove("oculto");
+
+  startButton.addEventListener('click', () => {
+    //Revisar ID's en tu html
+    intro.classList.add("oculto")
+  });
+
+}
 
 //? ============= Pruebas =========================================================
-
-// compruebaPuntos();
-
-//Revisar ID's en tu html
-
-//Revisar ID's en tu html
-let resetGame = document.getElementsByClassName("resetGame")
-console.log(document.getElementsByClassName("resetGame"));
+document.addEventListener("DOMContentLoaded",inicio());
 

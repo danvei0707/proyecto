@@ -20,6 +20,8 @@ export const AplicarColoresInterfaz = (r,g,b) => {
     body.style.background = `rgb(${r+90} ,${g+90} ,${b+90})`
     
     let header = document.querySelector("header")
+    header.style.background = `rgb(${r - 5} ,${g - 5} ,${b -5})`
+    header.style.textShadow = `none`
     
     let carteles = document.querySelectorAll(".centrado")
     console.log(carteles)
@@ -27,6 +29,7 @@ export const AplicarColoresInterfaz = (r,g,b) => {
     let cartel_media = window.matchMedia("(max-width: 848px)")
     console.log(cartel_media);
     if (cartel_media.matches){
+
       const cartel = document.querySelector(".cartel")
       cartel.style.background = `rgb(${r + 5} ,${g + 5} ,${b +5})`
     }
@@ -34,11 +37,11 @@ export const AplicarColoresInterfaz = (r,g,b) => {
     carteles.forEach((item)=>{
       item.style.textShadow = `0 0 3px rgb(${r+120} ,${g+120} ,${b+120})`
       item.style.color = `rgb(${r-100} ,${g-100} ,${b-100})`
-
     })
+    let start = document.querySelector(".start")
+    start.style.background = `rgb(${r + 25} ,${g + 25} ,${b +25} ,0.664)`
+    Buttons("#start",r ,g ,b)
     
-    header.style.background = `rgb(${r - 5} ,${g - 5} ,${b -5})`
-    header.style.textShadow = `none`
 
     Buttons("#resetGame2",r ,g ,b)
     Buttons("#resetGame1",r ,g ,b)

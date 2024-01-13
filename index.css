@@ -1,19 +1,5 @@
 /*? Diseño del CSS básico combinado*/
 
-.centrado > h1 > strong {
-    font-family: 'Lifters', sans-serif;
-    background: linear-gradient(130deg, #01070c 0%, #192634 100%);
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-.centrado > p {
-    font-family: 'Game Paused DEMO', sans-serif;
-    font-size: 25px;
-    background: linear-gradient(130deg, #01070c 0%, #192634 100%);
-    -webkit-background-clip: text;
-    color: transparent;
-}
 
 /** CARACTERÍSTICAS BÁSICAS */
 
@@ -28,11 +14,13 @@
         height: 100vh;
         grid-template-columns: 1fr  1fr;
         grid-template-rows: 10% 1fr;
-        grid-template-areas: 
+    grid-template-areas: 
         'header header'
         'main gird-padre';
         background-color: rgba(0, 186, 22, 0.023);
         border-radius: 0px;
+
+        background-color: #ffffff43;
     }
 
 
@@ -50,7 +38,7 @@
     
     header{
         flex-direction: column;
-        font-size: 20px;
+        font-size: 100%;
 
         grid-area: header;
         border-radius: 0px;
@@ -71,6 +59,7 @@
         display: block;
         width: 40% ;
         height: 20%;
+        border-radius: 200px;
         
         text-align: center;
 
@@ -87,25 +76,19 @@
         gap: 1.5rem;
         align-items: center;
     }
-/* 
-    .sample {
-        height: 30px;
-        width: 30px;
-
-        background-color: rgb(255, 0, 0);
-    } */
     
  
     .contadores {
         margin-top: 2rem;;
         display: flex;
         gap: 4rem;
-        
+
         font-size: 1.5rem;
     }
 
     .contadores > * {
         text-align: center;
+        border: 0.1px solid black;
         border: 0.1px solid black;
         padding: 1rem;
         box-shadow: 5px 5px 5px #0000007a;
@@ -113,6 +96,18 @@
         font-weight: bold;
         width: 180px;
     }
+
+
+
+.contador {
+    border: 0.1px solid rgba(212, 212, 212, 0.25);
+        background: linear-gradient(187deg, transparent 0%, rgba(0,0,0,0.32) 100%);
+        border: 0.2px solid rgba(0, 0, 0, 0.155); 
+    }
+
+
+
+
 
     /* ========================================================================= */
     /* ========================================================================= */
@@ -128,7 +123,6 @@
     .gridPadre{
         display: grid;
         grid-area: gird-padre;
-        
 
         grid-template-columns: repeat(2 , 1fr);
         grid-template-rows:  repeat(4 , 1fr);
@@ -232,15 +226,20 @@ div.fin {
 
     background-color: rgba(0, 0, 0, 0.500);
     border-radius: 0px;
+
 }
 
 .mensajeFin {
-    height: 200px;
-    width: 400px;
+    height: 30%;
+    width: 45%;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+
+
+    padding-top: 0px;
+    padding-bottom: 20px;
+
     align-items: center;
     padding-bottom: 10px;
     /* gap: 1rem; */
@@ -282,9 +281,9 @@ div.fin {
 
 .text_fin{
     font-weight: bold;
-
     margin-top: 1rem;
 }
+
 
 #derrotaTxt {
     font-weight: bold;
@@ -305,7 +304,26 @@ div.oculto {
     display: none;
 }
 
-@media (max-width: 667px) {
+#finGanar > div.mensajeFin {
+    gap: 0.5rem;
+    height: 300px;
+}
+div.mensajeFin > div{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    /* background-color: red; */
+}
+
+
+
+
+@media (max-width: 848px) {
+    .start{
+        height: 40%;
+        width: 50%;
+    }
+
     body {
         display: flex;
         flex-direction: column; 
@@ -332,7 +350,6 @@ div.oculto {
    }
 
    .cartel {
-
     padding: 5px;
     font-size: 22px;
    }
@@ -344,4 +361,9 @@ div.oculto {
    aside {
     height: 10%;
    }
+}
+
+.start{
+    display: flex;
+    justify-content: center;
 }
