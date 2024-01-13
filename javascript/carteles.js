@@ -68,9 +68,6 @@ function sonarMouse(){
   }
 
   const grid_itemas = document.querySelectorAll(".colorElegible");
-  let continueGame = document.getElementById("continueGame")
-  let resetGame1 = document.getElementById("resetGame1")
-  let resetGame2 = document.getElementById("resetGame2")
 
 // reinicia la secuencia de colores
 grid_itemas.forEach((item) => {
