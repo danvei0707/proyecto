@@ -1,10 +1,10 @@
 // function GenerarCarteles (aciertos, fallos) {
-//     if (aciertos === 3) {
-//          ganar();
-//     }else if(fallos === 3) {
-//          perder();
-// //     }
-//  }
+//    if (aciertos === 3) {
+//         ganar();
+//    }else if(fallos === 3) {
+//         perder();
+//   }
+// }
 const informacion= document.querySelector(".cartel")
 const puntaje= document.querySelector(".puntaje")
 
