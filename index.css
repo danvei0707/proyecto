@@ -143,7 +143,7 @@
     
     .colorElegible{
         background-color: pink;
-        border: 1px solid black;
+        border: 0.1px solid rgba(0, 0, 0, 0.2);
         padding: 8px; 
         font-size: 30px;
         font-weight: bold;
@@ -155,8 +155,14 @@
     }
 
     @keyframes reboteMouse {
-        0%{ scale: 100%;
-        }100%{  scale: 102%; }
+        0%{ 
+            scale: 100%;
+            border: 0.1px solid rgba(0, 0, 0, 0.2);
+        }
+        100%{  
+            scale: 102%;
+            border: 4px solid rgba(0, 0, 0, 0.2);
+        }
     }
 
     /* .puntaje {
@@ -193,9 +199,10 @@
     
     .puntaje { 
         /* height: 10rem;*/
+        /* background-color: rgba(0, 0, 0, 0.22); */
+        text-shadow: 1px 1px 10px whitesmoke;
         font-family: 'Bungee Spice', sans-serif;
-        width: 40%; 
-        
+        width: 40%;
         display: flex;
         flex-direction: row;
 
@@ -207,7 +214,7 @@
         left: 26.3%;
         top: 20%;
         translate: -50% -50%;
-        font-size: 100%;
+        font-size: 60%;
         animation: expandirYRebotar 0.2s ease-in-out; 
     }
 
@@ -348,7 +355,7 @@ div.mensajeFin > div{
 
 
 
-@media (max-width: 667px) {
+@media (max-width: 848px) {
     body {
         display: flex;
         flex-direction: column; 
@@ -361,4 +368,30 @@ div.mensajeFin > div{
     header {
         height: 15%;
     }
+
+    .puntaje {
+        height: 100px; 
+        width: 300px; 
+        font-family: 'Bungee Spice', sans-serif;
+        text-align: center; 
+        display: flex; 
+        justify-content: center; 
+        align-items:center; 
+        left:50%;top:50%; 
+        animation: expandirYRebotar 0.2s ease-in-out; 
+   }
+
+   .cartel {
+
+    padding: 5px;
+    font-size: 22px;
+   }
+
+   main {
+    height: 90%;
+   }
+
+   aside {
+    height: 10%;
+   }
 }
