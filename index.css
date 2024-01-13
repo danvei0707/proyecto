@@ -283,6 +283,17 @@ div.fin {
     animation: rebote 0.5s ease-in-out;
 }
 
+div.mensajeFin.start{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+
+    animation: expandir 2s ease-in-out; 
+    width: auto;
+    padding: 2rem;
+}
+
 @keyframes expandir {
     0% {
       opacity: 0; 
@@ -323,7 +334,7 @@ div.fin {
 }
 
 .button_color{
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     border: none;
     padding: 0.75rem;
     border-radius: 10%;
