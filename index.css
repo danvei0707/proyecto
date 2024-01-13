@@ -1,19 +1,5 @@
 /*? Diseño del CSS básico combinado*/
 
-.centrado > h1 > strong {
-    font-family: 'Lifters', sans-serif;
-    background: linear-gradient(130deg, #01070c 0%, #192634 100%);
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-.centrado > p {
-    font-family: 'Game Paused DEMO', sans-serif;
-    font-size: 25px;
-    background: linear-gradient(130deg, #01070c 0%, #192634 100%);
-    -webkit-background-clip: text;
-    color: transparent;
-}
 
 /** CARACTERÍSTICAS BÁSICAS */
 
@@ -28,11 +14,13 @@
         height: 100vh;
         grid-template-columns: 1fr  1fr;
         grid-template-rows: 10% 1fr;
-        grid-template-areas: 
+    grid-template-areas: 
         'header header'
         'main gird-padre';
         background-color: rgba(0, 186, 22, 0.023);
         border-radius: 0px;
+
+        background-color: #ffffff43;
     }
 
 
@@ -50,7 +38,7 @@
     
     header{
         flex-direction: column;
-        font-size: 20px;
+        font-size: 100%;
 
         background-color: rgb(64, 46, 0);
         grid-area: header;
@@ -72,6 +60,7 @@
         display: block;
         width: 40% ;
         height: 20%;
+        border-radius: 200px;
         
         text-align: center;
 
@@ -97,30 +86,34 @@
         background-color: rgb(255, 0, 0);
     } */
     
-    .ruedaDeColor {
-
-        /* La imagen */
-        height: 200px;
-        border-radius: 40%;
-    } 
    
     .contadores {
         margin-top: 2rem;;
         display: flex;
         gap: 4rem;
-        
+
         font-size: 1.5rem;
     }
 
     .contadores > * {
         text-align: center;
-        border: 2px solid black;
+        border: 0.1px solid black;
         padding: 1rem;
-        box-shadow: 10px 10px 5px #0000007a;
-        font-family: 'Abel', sans-serif;
-        font-weight: bold;
+        box-shadow: 5px 5px 5px #0000007a;
         width: 180px;
     }
+
+
+
+.contador {
+    border: 0.1px solid rgba(212, 212, 212, 0.25);
+        background: linear-gradient(187deg, transparent 0%, rgba(0,0,0,0.32) 100%);
+        border: 0.2px solid rgba(0, 0, 0, 0.155); 
+    }
+
+
+
+
 
     /* ========================================================================= */
     /* ========================================================================= */
@@ -136,7 +129,6 @@
     .gridPadre{
         display: grid;
         grid-area: gird-padre;
-        
 
         grid-template-columns: repeat(2 , 1fr);
         grid-template-rows:  repeat(4 , 1fr);
@@ -152,25 +144,101 @@
     .colorElegible{
         background-color: pink;
         border: 1px solid black;
-        padding: 8px;  
-        box-shadow: 10px 10px 5px #0000007a;
-        font-family: 'Abel', sans-serif;
+        padding: 8px; 
+        font-size: 30px;
         font-weight: bold;
         font-size: 20px;
     }
 
-    .puntaje {
+    button.colorElegible:hover{
+        animation: reboteMouse 0.2s forwards; 
+    }
+
+    @keyframes reboteMouse {
+        0%{ scale: 100%;
+        }100%{  scale: 102%; }
+    }
+
+    /* .puntaje {
          height: 100px; 
          width: 300px; 
-         background-color: blanchedalmond;
+         background-color: rgba(0, 0, 0, 0.22);
+         font-family: 'Bungee Spice', sans-serif;
          text-align: center; 
          display: flex; 
          justify-content: center; 
          align-items:center; 
          position:absolute;
          left:50%;top:50%; 
-         translate: -50% -50%; 
+         translate: -50% -50%;
+         animation: expandirYRebotar 0.2s ease-in-out; 
     }
+
+    @keyframes expandirYRebotar {
+        0% {
+          opacity: 0; 
+          transform: scale(0); 
+        }
+        50% {
+          opacity: 1; 
+          transform: scale(1.2); 
+        }
+        100% {
+          transform: scale(1); 
+        }
+      } */
+
+
+
+    
+    .puntaje { 
+        /* height: 10rem;*/
+        /* background-color: rgba(0, 0, 0, 0.22); */
+        text-shadow: 1px 1px 10px whitesmoke;
+        font-family: 'Bungee Spice', sans-serif;
+        width: 40%; 
+        
+        display: flex;
+        flex-direction: row;
+
+        text-align: center;
+        justify-content:center;
+        align-items: center;
+        position: absolute;
+
+        left: 27%;
+        top: 20%;
+        translate: -50% -50%;
+        font-size: 60%;
+        animation: expandirYRebotar 0.2s ease-in-out; 
+    }
+
+    @keyframes expandirYRebotar {
+        0% {
+          opacity: 0; 
+          transform: scale(0); 
+        }
+        50% {
+          opacity: 1; 
+          transform: scale(1.2); 
+        }
+        100% {
+          transform: scale(1); 
+        }
+      }
+
+     @keyframes zoom-rebote {
+    
+        0%{scale: 0%;
+        }50%{scale: 120%;
+        }100%{
+            scale: 100%;
+        }
+    }
+    
+    /* .puntaje > h1{
+        text-shadow: 0 0 2px red;
+    } */
 
 
 /*? ========================================================================= */
@@ -193,15 +261,20 @@ div.fin {
 
     background-color: rgba(0, 0, 0, 0.500);
     border-radius: 0px;
+
 }
 
 .mensajeFin {
-    height: 200px;
-    width: 400px;
+    height: 30%;
+    width: 45%;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+
+
+    padding-top: 0px;
+    padding-bottom: 20px;
+
     align-items: center;
     /* gap: 1rem; */
     
@@ -250,12 +323,11 @@ div.mensajeFin.start{
 
 .text_fin{
     font-weight: bold;
-
     margin-top: 1rem;
 }
 
+
 #derrotaTxt {
-    color: rgb(116, 2, 2);
     font-weight: bold;
 
     margin-top: 1rem;
@@ -274,6 +346,20 @@ div.oculto {
     display: none;
 }
 
+#finGanar > div.mensajeFin {
+    gap: 0.5rem;
+    height: 300px;
+}
+div.mensajeFin > div{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    /* background-color: red; */
+}
+
+
+
+
 @media (max-width: 667px) {
     body {
         display: flex;
@@ -287,28 +373,4 @@ div.oculto {
     header {
         height: 15%;
     }
-
-    .puntaje {
-        height: 100px; 
-        width: 300px; 
-        font-family: 'Bungee Spice', sans-serif;
-        text-align: center; 
-        display: flex; 
-        justify-content: center; 
-        align-items:center; 
-        left:50%;top:50%; 
-        animation: expandirYRebotar 0.2s ease-in-out; 
-   }
-
-   .cartel {
-    font-size: 22px;
-   }
-
-   main {
-    height: 90%;
-   }
-
-   aside {
-    height: 10%;
-   }
 }
