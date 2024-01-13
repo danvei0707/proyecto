@@ -31,7 +31,7 @@ function Frase(frase1,frase2,frase3,frase4){
     "¡No sé cómo lo hiceste, pero la rueda de colores te eligió como su campeón!",
     "¡Bravo! Incluso Pantone estaría orgulloso de tu elección de color.")   
 
-    setTimeout(function() {puntaje.classList.add("oculto")}, 1500);
+    setTimeout(function() {puntaje.classList.add("oculto")}, 8000);
    
  }
  export const perder=() => { 
@@ -43,7 +43,7 @@ function Frase(frase1,frase2,frase3,frase4){
       "Vaya, mi visión de colores debe estar en huelga hoy!",
       "Tu dedo y el color correcto deben estar en términos de separación temporal!"
       )
-    setTimeout(function() {puntaje.classList.add("oculto")}, 5000);
+    setTimeout(function() {puntaje.classList.add("oculto")}, 8000);
  }
  
  function sonarGanaste(){
